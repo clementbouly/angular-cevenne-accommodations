@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./saas/mixins" as *;
+
+:root {
+    --color1: hsl(30, 40%, 99.1%); // App background
+    --color2: hsl(30, 50%, 97.6%); // Subtle background
+    --color3: hsl(30, 52.5%, 94.6%); // UI element background
+    --color4: hsl(30, 53%, 91.2%); // Hovered UI element background
+    --color5: hsl(29, 52.9%, 86.8%); // Active / Selected UI element background
+    --color6: hsl(29, 52.5%, 80.9%); // Subtle borders and separators
+    --color7: hsl(29, 51.5%, 72.8%); // UI element border and focus rings
+    --color8: hsl(28, 50%, 63.1%); // Hovered UI element border
+    --color9: hsl(28, 34%, 51%); // Solid backgrounds
+    --color10: hsl(27, 31.8%, 47.6%); // Hovered solid backgrounds
+    --color11: hsl(25, 30%, 41%); // Low-contrast text
+    --color12: hsl(20, 30%, 19%); // High-contrast text
+
+    --white: white;
+    --primary-color: #a68b2f;
+    --shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+    @include respond(phone) {
+        font-size: 49%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%;
+    }
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--color12);
+    box-sizing: border-box;
+    overflow-y: hidden;
+}

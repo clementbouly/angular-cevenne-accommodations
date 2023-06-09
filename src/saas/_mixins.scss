@@ -1,0 +1,83 @@
+// MEDIA QUERIES MANAGER //
+
+/*
+    0 - 600px = mobile
+    600px - 900px = portrait tablet
+    900px - 1200px = landscape tablet
+    [1200px - 1800px] = desktop (normal style : desktop first)
+    1800px - § = large desktop
+
+    This mixins are used to create media queries for responsive design.
+
+    1em = 16px
+    We use em because it is relative to the parent element
+    Wich is the font-size used in the browser settings (usually 16px)
+*/
+
+// 0 - 600px
+@mixin phone {
+    @media only screen and (max-width: 37.5em) {
+        @content;
+    }
+}
+
+// 600px - 900px
+@mixin tab-port {
+    @media only screen and (min-width: 37.5em) and (max-width: 56.25em) {
+        @content;
+    }
+}
+
+// 900px - 1200px
+@mixin tab-land {
+    @media only screen and (min-width: 56.25em) and (max-width: 75em) {
+        @content;
+    }
+}
+
+// 1800px - §
+@mixin big-desktop {
+    @media only screen and (min-width: 112.5em) {
+        @content;
+    }
+}
+
+@mixin touch-screens {
+    @media (hover: none) {
+        @content;
+    }
+}
+
+@mixin respond($breakpoints...) {
+    @each $breakpoint in $breakpoints {
+        @if $breakpoint ==phone {
+            @include phone {
+                @content;
+            }
+        }
+
+        @else if $breakpoint ==tab-port {
+            @include tab-port {
+                @content;
+            }
+        }
+
+        @else if $breakpoint ==tab-land {
+            @include tab-land {
+                @content;
+            }
+        }
+
+        @else if $breakpoint ==big-desktop {
+            @include big-desktop {
+                @content;
+            }
+        }
+
+        @else if $breakpoint ==touch-screens {
+            @include touch-screens {
+                @content;
+            }
+        }
+    }
+}
