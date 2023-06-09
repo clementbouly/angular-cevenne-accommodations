@@ -1,0 +1,32 @@
+.link {
+    font-size: 1.5rem;
+    color: var(--color12);
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 1rem;
+    display: block;
+
+    &:hover &__graphic--slide {
+        transform: translateX(-66.6%);
+    }
+
+    &__graphic {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        fill: none;
+        stroke: #000;
+        stroke-width: 1px;
+        width: 30rem;
+
+        &--slide {
+            top: -3px;
+            stroke-width: 2px;
+            transition: transform 0.7s;
+            transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+        }
+    }
+}

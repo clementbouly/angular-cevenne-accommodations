@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="header__logo">
+    <a routerLink="/"
+      ><img
+        src="/assets/logo/logo-web-transparent.png"
+        alt="Logo"
+        class="header__logo-img"
+    /></a>
+  </div>
+  <nav class="header__nav">
+    <ul class="header__list">
+      <app-header-link *ngFor="let link of links" [link]="link" />
+    </ul>
+  </nav>
+  <div class="header__btn">
+    <a class="btn btn--primary">Réservez maintenant</a>
+  </div>
+</header>

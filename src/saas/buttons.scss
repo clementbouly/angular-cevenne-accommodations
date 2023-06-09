@@ -1,0 +1,24 @@
+@use "mixins" as *;
+
+.btn {
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    @include respond(phone, tab-port) {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    &--primary {
+        color: var(--color3);
+        background-color: var(--color9);
+
+        &:hover {
+            background-color: var(--color10);
+        }
+    }
+}
