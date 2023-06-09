@@ -1,6 +1,7 @@
 @use "./saas/mixins" as *;
 @use "./saas/buttons.scss" as *;
 
+
 :root {
     --color1: hsl(30, 40%, 99.1%); // App background
     --color2: hsl(30, 50%, 97.6%); // Subtle background
