@@ -21,6 +21,7 @@
         bottom: 8rem;
         width: auto;
         animation: moveInLeft 1s ease-out;
+        z-index: 10;
 
         @include respond(phone, tab-port) {
             right: 0rem;

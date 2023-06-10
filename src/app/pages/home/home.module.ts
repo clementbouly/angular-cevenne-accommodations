@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './home.component';
-import { SliderComponent } from 'src/app/components/slider/slider.component';
+import { HomeCarouselComponent } from 'src/app/components/home-carousel/home-carousel.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { GalleryModule } from 'ng-gallery';
 
 @NgModule({
-    declarations: [HomeComponent, SliderComponent],
+    declarations: [HomeComponent, HomeCarouselComponent],
     imports: [
         CommonModule,
         RouterModule.forChild([{ path: '', component: HomeComponent }]),
+        GalleryModule,
     ],
 })
 export class HomeModule {
