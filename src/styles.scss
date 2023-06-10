@@ -1,6 +1,7 @@
 @use "./saas/mixins" as *;
 @use "./saas/buttons" as *;
 @use "./saas/animations" as *;
+@import "~@angular/cdk/overlay-prebuilt.css";
 
 :root {
     --color1: hsl(30, 40%, 99.1%); // App background

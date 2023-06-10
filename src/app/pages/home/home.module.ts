@@ -4,6 +4,7 @@ import { HomeCarouselComponent } from 'src/app/components/home-carousel/home-car
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { GalleryModule } from 'ng-gallery';
+import { LightboxModule } from 'ng-gallery/lightbox';
 
 @NgModule({
     declarations: [HomeComponent, HomeCarouselComponent],
@@ -11,6 +12,7 @@ import { GalleryModule } from 'ng-gallery';
         CommonModule,
         RouterModule.forChild([{ path: '', component: HomeComponent }]),
         GalleryModule,
+        LightboxModule,
     ],
 })
 export class HomeModule {

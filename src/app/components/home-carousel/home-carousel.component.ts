@@ -4,21 +4,23 @@ import { GalleryItem, ImageItem } from 'ng-gallery';
 @Component({
   selector: 'app-home-carousel',
   template: `
-    <section class="section-slider">
-      <div class="slideshow">
+    <section class="section-carousel">
+      <div class="carousel">
         <!-- https://github.com/MurhafSousli/ngx-gallery/wiki/Gallery-API -->
         <gallery
+          gallerize
           [items]="images"
           [thumb]="false"
           imageSize="cover"
-          [autoPlay]="true"
+          [autoPlay]="false"
+          [counter]="false"
         ></gallery>
 
-        <div class="slideshow__title">
-          <h1 class="slideshow__title-main">
+        <div class="carousel__title">
+          <h1 class="carousel__title-main">
             Location de gîtes dans les Cévennes
           </h1>
-          <p class="slideshow__title-sub">
+          <p class="carousel__title-sub">
             Réservez nos appartements de 1 à 2 personnes
           </p>
         </div>
@@ -33,11 +35,16 @@ export class HomeCarouselComponent implements OnInit {
     '/assets/img/accueil/Accueil_1.webp',
     '/assets/img/accueil/Accueil_2.webp',
     '/assets/img/accueil/Accueil_3.webp',
+    '/assets/img/accueil/Accueil_1.webp',
+    '/assets/img/accueil/Accueil_2.webp',
+    '/assets/img/accueil/Accueil_3.webp',
+    '/assets/img/accueil/Accueil_1.webp',
+    '/assets/img/accueil/Accueil_2.webp',
   ];
 
   ngOnInit(): void {
     const imagesItems = this.imagesPath.map(
-      (path) => new ImageItem({ src: path })
+      (path) => new ImageItem({ src: path, thumb: path })
     );
     this.images = imagesItems;
   }
