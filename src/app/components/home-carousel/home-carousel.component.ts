@@ -1,7 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { GalleryItem, ImageItem } from 'ng-gallery';
+import { GalleryItem, GalleryModule, ImageItem } from 'ng-gallery';
+import { LightboxModule } from 'ng-gallery/lightbox';
+
+interface Image {
+  path: string;
+}
 
 @Component({
+  standalone: true,
+  imports: [GalleryModule, LightboxModule],
   selector: 'app-home-carousel',
   template: `
     <section class="section-carousel">
@@ -9,7 +16,7 @@ import { GalleryItem, ImageItem } from 'ng-gallery';
         <!-- https://github.com/MurhafSousli/ngx-gallery/wiki/Gallery-API -->
         <gallery
           gallerize
-          [items]="images"
+          [items]="imagesItems"
           [thumb]="false"
           imageSize="cover"
           [autoPlay]="false"
@@ -30,22 +37,22 @@ import { GalleryItem, ImageItem } from 'ng-gallery';
   styleUrls: ['./home-carousel.component.scss'],
 })
 export class HomeCarouselComponent implements OnInit {
-  images: GalleryItem[] = [];
-  imagesPath = [
-    '/assets/img/accueil/Accueil_1.webp',
-    '/assets/img/accueil/Accueil_2.webp',
-    '/assets/img/accueil/Accueil_3.webp',
-    '/assets/img/accueil/Accueil_1.webp',
-    '/assets/img/accueil/Accueil_2.webp',
-    '/assets/img/accueil/Accueil_3.webp',
-    '/assets/img/accueil/Accueil_1.webp',
-    '/assets/img/accueil/Accueil_2.webp',
+  imagesItems: GalleryItem[] = [];
+  images: Image[] = [
+    { path: '/assets/img/accueil/Accueil_1.webp' },
+    { path: '/assets/img/accueil/Accueil_2.webp' },
+    { path: '/assets/img/accueil/Accueil_3.webp' },
+    { path: '/assets/img/accueil/Accueil_1.webp' },
+    { path: '/assets/img/accueil/Accueil_2.webp' },
+    { path: '/assets/img/accueil/Accueil_3.webp' },
+    { path: '/assets/img/accueil/Accueil_1.webp' },
+    { path: '/assets/img/accueil/Accueil_2.webp' },
   ];
 
   ngOnInit(): void {
-    const imagesItems = this.imagesPath.map(
-      (path) => new ImageItem({ src: path, thumb: path })
+    const imagesItems = this.images.map(
+      (img) => new ImageItem({ src: img.path, thumb: img.path })
     );
-    this.images = imagesItems;
+    this.imagesItems = imagesItems;
   }
 }
