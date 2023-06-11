@@ -4,6 +4,10 @@
     position: relative;
     height: 50rem;
 
+    &__gallery {
+        height: inherit;
+    }
+
     &__image {
         animation: scaleIn 1s ease-out;
         width: 100%;

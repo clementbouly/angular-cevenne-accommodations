@@ -15,6 +15,7 @@ interface Image {
       <div class="carousel">
         <!-- https://github.com/MurhafSousli/ngx-gallery/wiki/Gallery-API -->
         <gallery
+          class="carousel__gallery"
           gallerize
           [items]="imagesItems"
           [thumb]="false"
