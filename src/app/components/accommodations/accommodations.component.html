@@ -1,0 +1,9 @@
+<section class="accommodations">
+  <h2 class="heading-primary">Nos Hébergements</h2>
+  <div class="accommodation-list">
+    <app-accommodation
+      *ngFor="let accommodation of accommodations"
+      [accommodation]="accommodation"
+    />
+  </div>
+</section>

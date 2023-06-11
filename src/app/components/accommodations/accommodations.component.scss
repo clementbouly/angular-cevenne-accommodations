@@ -1,0 +1,22 @@
+@use "/src/saas/mixins" as *;
+
+.accommodations {
+    width: 80%;
+    margin: 3rem auto;
+    margin-bottom: 10rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+.accommodation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15rem;
+
+    @include respond(phone, tab-port) {
+        gap: 5rem;
+    }
+}

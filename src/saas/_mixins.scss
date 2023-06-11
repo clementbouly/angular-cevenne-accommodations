@@ -81,3 +81,15 @@
         }
     }
 }
+
+@mixin after-image($image-url, $width, $height, $bottom) {
+    background-image: url("#{$image-url}");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    width: $width;
+    height: $height;
+    content: "";
+    position: absolute;
+    bottom: $bottom;
+}

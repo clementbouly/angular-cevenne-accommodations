@@ -1,0 +1,32 @@
+@use "/src/saas/mixins" as *;
+
+.heading-primary {
+    font-size: 5rem;
+    font-weight: 400;
+    font-family: "Dancing Script", cursive;
+    color: var(--primary-color);
+}
+
+.heading-secondary {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 3.5rem;
+
+    @include respond(phone, tab-port) {
+        font-size: 2.5rem;
+    }
+}
+
+.heading-tertiary {
+    font-weight: 300;
+    font-size: 3rem;
+
+    @include respond(phone, tab-port) {
+        font-size: 2.2rem;
+    }
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    font-weight: 500;
+}

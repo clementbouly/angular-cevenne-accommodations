@@ -1,0 +1,32 @@
+<div [ngClass]="'accommodation accommodation--' + accommodation.position">
+  <figure class="accommodation__images">
+    <img
+      [src]="accommodation.mainImage"
+      [alt]="accommodation.title"
+      class="accommodation__images--main"
+    />
+    <img
+      [src]="accommodation.secondaryImage"
+      [alt]="accommodation.title"
+      [ngClass]="
+        'accommodation__images--secondary accommodation__images--secondary--' +
+        accommodation.position
+      "
+    />
+  </figure>
+  <div class="accommodation__details">
+    <h2
+      [ngClass]="
+        'heading-secondary accommodation__details__heading--' +
+        accommodation.identifier
+      "
+    >
+      {{ accommodation.title }}
+    </h2>
+    <h3 class="heading-tertiary">{{ accommodation.subtitle }}</h3>
+    <p>
+      {{ accommodation.description }}
+    </p>
+    <a class="btn btn--primary">Réserver maintenant</a>
+  </div>
+</div>

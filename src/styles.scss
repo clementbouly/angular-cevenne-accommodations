@@ -1,6 +1,7 @@
 @use "./saas/mixins" as *;
 @use "./saas/buttons" as *;
 @use "./saas/animations" as *;
+@use "./saas/typography" as *;
 @import "~@angular/cdk/overlay-prebuilt.css";
 
 :root {
