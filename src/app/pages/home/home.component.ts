@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AccommodationsComponent } from 'src/app/components/accommodations/accommodations.component';
 import { AreaPresentationComponent } from 'src/app/components/area-presentation/area-presentation.component';
 import { HomeCarouselComponent } from 'src/app/components/home-carousel/home-carousel.component';
+import { ImagesGalleryComponent } from 'src/app/components/images-gallery/images-gallery.component';
 import { PrestationsListComponent } from 'src/app/components/prestations-list/prestations-list.component';
 import { SeparatorComponent } from 'src/app/shared/components/separator/separator.component';
 
@@ -13,6 +14,7 @@ import { SeparatorComponent } from 'src/app/shared/components/separator/separato
     SeparatorComponent,
     AreaPresentationComponent,
     PrestationsListComponent,
+    ImagesGalleryComponent,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],

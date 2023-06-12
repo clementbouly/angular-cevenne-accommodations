@@ -1,0 +1,22 @@
+<div *ngIf="!isMobile()" class="gallery" gallerize>
+  <figure
+    *ngFor="let image of images"
+    [class]="'gallery__item gallery__item--' + image.identifier"
+  >
+    <img
+      [src]="image.src"
+      [attr.imageSrc]="image.src"
+      [attr.thumbSrc]="image.src"
+      class="gallery__img"
+    />
+  </figure>
+</div>
+
+<gallery
+  *ngIf="isMobile()"
+  [items]="imagesItems"
+  [thumb]="true"
+  imageSize="cover"
+  [counter]="true"
+  [dots]="true"
+></gallery>
