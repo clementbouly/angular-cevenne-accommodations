@@ -12,11 +12,4 @@
   </figure>
 </div>
 
-<gallery
-  *ngIf="isMobile()"
-  [items]="imagesItems"
-  [thumb]="true"
-  imageSize="cover"
-  [counter]="true"
-  [dots]="true"
-></gallery>
+<gallery *ngIf="isMobile()" id="gallery" [items]="imagesItems"></gallery>

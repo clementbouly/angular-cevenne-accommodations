@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LightboxModule } from 'ng-gallery/lightbox';
-import { GalleryItem, GalleryModule, ImageItem } from 'ng-gallery';
+import {
+  Gallery,
+  GalleryConfig,
+  GalleryItem,
+  GalleryModule,
+  ImageItem,
+} from 'ng-gallery';
 
 interface GalleryImage {
   title: string;
@@ -92,12 +98,22 @@ export class ImagesGalleryComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(private gallery: Gallery) { }
 
   ngOnInit(): void {
     this.imagesItems = this.images.map(
       (img) => new ImageItem({ src: img.src, thumb: img.src })
     );
+
+    const config: GalleryConfig = {
+      thumb: true,
+      imageSize: "cover",
+      counter: true,
+      dots: true,
+    };
+    const galleryRef = this.gallery.ref('myGallery');
+
+    galleryRef.setConfig(config);
   }
 
   isMobile() {
