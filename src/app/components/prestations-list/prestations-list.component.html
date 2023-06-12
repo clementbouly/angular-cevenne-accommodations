@@ -1,0 +1,10 @@
+<section class="section-services">
+  <h2 class="heading-primary">Nos Prestations</h2>
+
+  <div class="services-list">
+    <app-prestation-item
+      *ngFor="let prestation of prestations"
+      [prestation]="prestation"
+    />
+  </div>
+</section>

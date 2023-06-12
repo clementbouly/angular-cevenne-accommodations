@@ -1,0 +1,18 @@
+@use "/src/saas/mixins" as *;
+
+.section-services {
+    padding: 8rem 0;
+    text-align: center;
+}
+
+.services-list {
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 10rem;
+
+    @include respond(phone, tab-port) {
+        gap: 3rem;
+    }
+}
