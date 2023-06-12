@@ -1,5 +1,10 @@
 <div class="service">
-  <img [src]="prestation.image" alt="piscine exterieur" class="service__icon" />
+  <img
+    loading="lazy"
+    [src]="prestation.image"
+    alt="piscine exterieur"
+    class="service__icon"
+  />
   <h3 class="heading-secondary">
     {{ prestation.title }}
   </h3>

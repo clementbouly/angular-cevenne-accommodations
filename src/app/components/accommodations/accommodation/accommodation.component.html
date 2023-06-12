@@ -4,6 +4,7 @@
       [src]="accommodation.mainImage"
       [alt]="accommodation.title"
       class="accommodation__images--main"
+      loading="lazy"
     />
     <img
       [src]="accommodation.secondaryImage"
@@ -12,6 +13,7 @@
         'accommodation__images--secondary accommodation__images--secondary--' +
         accommodation.position
       "
+      loading="lazy"
     />
   </figure>
   <div class="accommodation__details">
