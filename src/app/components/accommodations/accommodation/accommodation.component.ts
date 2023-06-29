@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 import { Accommodation } from 'src/app/shared/models/Accommodation';
 
 @Component({

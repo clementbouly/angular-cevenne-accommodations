@@ -1,4 +1,7 @@
-<div [ngClass]="'accommodation accommodation--' + accommodation.position">
+<div
+  [ngClass]="'accommodation accommodation--' + accommodation.position"
+  *ngIf="accommodation"
+>
   <figure class="accommodation__images">
     <img
       [src]="accommodation.mainImage"
@@ -32,3 +35,5 @@
     <a class="btn btn--primary">Réserver maintenant</a>
   </div>
 </div>
+
+<div *ngIf="!accommodation">No accommodations available</div>

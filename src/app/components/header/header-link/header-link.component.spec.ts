@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { RouterTestingModule } from '@angular/router/testing';
 import { HeaderLinkComponent } from './header-link.component';
 
 describe('HeaderLinkComponent', () => {
@@ -8,7 +9,7 @@ describe('HeaderLinkComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HeaderLinkComponent]
+      imports: [HeaderLinkComponent, RouterTestingModule]
     });
     fixture = TestBed.createComponent(HeaderLinkComponent);
     component = fixture.componentInstance;

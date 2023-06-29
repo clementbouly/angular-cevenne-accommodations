@@ -31,7 +31,7 @@ export class AccommodationsService {
       position: 'textRight',
     },
   ];
-  constructor() { }
+  constructor() {}
 
   getAccommodations(): Accommodation[] {
     return this.accommodations;

@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AccommodationComponent } from './accommodation/accommodation.component';
+import { Component, OnInit } from '@angular/core';
 import { Accommodation } from 'src/app/shared/models/Accommodation';
 import { AccommodationsService } from 'src/app/shared/services/accommodations.service';
+import { AccommodationComponent } from './accommodation/accommodation.component';
 
 @Component({
   selector: 'app-accomodations',
@@ -14,8 +14,7 @@ import { AccommodationsService } from 'src/app/shared/services/accommodations.se
 export class AccommodationsComponent implements OnInit {
   accommodations: Accommodation[] = [];
 
-  constructor(private accommodationsService: AccommodationsService) {
-  }
+  constructor(private accommodationsService: AccommodationsService) {}
 
   ngOnInit(): void {
     this.accommodations = this.accommodationsService.getAccommodations();

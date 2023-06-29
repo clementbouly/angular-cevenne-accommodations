@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 import { Prestation } from 'src/app/shared/models/Prestation';
 
 @Component({
@@ -10,5 +10,9 @@ import { Prestation } from 'src/app/shared/models/Prestation';
   styleUrls: ['./prestation-item.component.scss'],
 })
 export class PrestationItemComponent {
-  @Input() prestation!: Prestation;
+  @Input() prestation: Prestation = {
+    title: '',
+    description: '',
+    image: '',
+  };
 }

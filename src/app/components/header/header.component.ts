@@ -15,7 +15,7 @@ export interface Link {
   imports: [CommonModule, HeaderLinkComponent],
 })
 export class HeaderComponent {
-  links = [
+  links: Link[] = [
     { path: 'home', title: 'Accueil' },
     { path: 'prices', title: 'Tarif' },
     { path: 'tourism', title: 'Tourisme' },
