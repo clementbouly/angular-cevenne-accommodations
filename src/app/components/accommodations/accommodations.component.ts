@@ -5,7 +5,7 @@ import { AccommodationsService } from 'src/app/shared/services/accommodations.se
 import { AccommodationComponent } from './accommodation/accommodation.component';
 
 @Component({
-  selector: 'app-accomodations',
+  selector: 'app-accommodations',
   standalone: true,
   imports: [CommonModule, AccommodationComponent],
   templateUrl: './accommodations.component.html',

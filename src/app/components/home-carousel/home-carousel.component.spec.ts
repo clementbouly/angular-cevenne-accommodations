@@ -9,7 +9,7 @@ describe('HomeCarouselComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HomeCarouselComponent, BrowserAnimationsModule]
+      imports: [BrowserAnimationsModule]
     });
     fixture = TestBed.createComponent(HomeCarouselComponent);
     component = fixture.componentInstance;

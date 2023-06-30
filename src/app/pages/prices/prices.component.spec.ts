@@ -7,9 +7,7 @@ describe('PricesComponent', () => {
   let fixture: ComponentFixture<PricesComponent>;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [PricesComponent]
-    });
+    TestBed.configureTestingModule({});
     fixture = TestBed.createComponent(PricesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

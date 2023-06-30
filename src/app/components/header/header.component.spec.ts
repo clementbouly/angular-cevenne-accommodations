@@ -11,8 +11,8 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderComponent, HeaderLinkComponent, RouterTestingModule],
-    }).compileComponents();
+      imports: [HeaderLinkComponent, RouterTestingModule],
+    })
   });
 
   beforeEach(() => {
@@ -32,7 +32,7 @@ describe('HeaderComponent', () => {
   it('should display the "Réservez maintenant" button', () => {
     const buttonElement = fixture.debugElement.query(
       By.css('.header__btn .btn--primary')
-    ).nativeElement as HTMLButtonElement;
+    ).nativeElement as HTMLLinkElement;
     expect(buttonElement.textContent).toBe('Réservez maintenant');
   });
 });

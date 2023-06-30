@@ -9,7 +9,7 @@ describe('HomeComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HomeComponent, BrowserAnimationsModule],
+      imports: [BrowserAnimationsModule],
     });
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
